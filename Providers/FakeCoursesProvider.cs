@@ -20,6 +20,22 @@ namespace ListaCursos.Providers
                 Description = "El mejor curso del mundo",
                 Uri = "http://linkedin.com/learning"
             });
+            repo.Add(new Course()
+            {
+                Id = 2,
+                Name = "Curso de Python Profesional",
+                Author = "José Daniel Posso García",
+                Description = "El mejor curso del mundo",
+                Uri = "http://linkedin.com/learning"
+            });
+            repo.Add(new Course()
+            {
+                Id = 3,
+                Name = "Curso de Javascriot Profesional",
+                Author = "José Daniel Posso García",
+                Description = "El mejor curso del mundo",
+                Uri = "http://linkedin.com/learning"
+            });
         }
 
         public Task<ICollection<Course>> GetAllAsync()
