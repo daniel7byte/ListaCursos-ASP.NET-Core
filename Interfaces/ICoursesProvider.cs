@@ -15,5 +15,7 @@ namespace ListaCursos.Interfaces
     Task<Course> GetAsync(int id);
 
     Task<bool> UpdateAsync(int id, Course course);
+
+    Task<(bool IsSucces, int? Id)> AddAsync(Course course);
   }
 }

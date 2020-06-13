@@ -38,6 +38,13 @@ namespace ListaCursos.Providers
       });
     }
 
+    public Task<(bool IsSucces, int? Id)> AddAsync(Course course)
+    {
+      course.Id = repo.Max(c => c.Id) + 1;
+      repo.Add(course);
+      return Task.FromResult((true, (int?)course.Id));
+    }
+
     public Task<ICollection<Course>> GetAllAsync()
     {
       return Task.FromResult((ICollection<Course>)repo.ToList());
