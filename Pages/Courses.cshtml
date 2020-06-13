@@ -22,6 +22,11 @@
         <td>@course.Id</td>
         <td>@course.Name</td>
         <td>@course.Author</td>
+        <td>
+            <a class="btn btn-link" asp-page="Details" asp-route-id="@course.Id">
+                Ver más
+            </a>
+        </td>
     </tr>
     }
 </table>
