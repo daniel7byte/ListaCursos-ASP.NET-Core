@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListaCursos.Interfaces
 {
-    interface ICoursesProvider
+    public interface ICoursesProvider
     {
         Task<ICollection<Course>> GetAllAsync();
 
